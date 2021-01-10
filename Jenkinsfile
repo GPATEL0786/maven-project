@@ -19,7 +19,7 @@ stage('please compile code')
 stage('please package code')
     {steps
      {withMaven(jdk: 'Gaurav-Home', maven: 'Gaurav-Maven') {
-    sh 'mvn package'
+    sh 'mvn test'
      }
     }
 
