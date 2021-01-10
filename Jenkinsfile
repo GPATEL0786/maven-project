@@ -36,7 +36,7 @@ stage('please build code')
      }
     
     }
-    stage('deploy on tomcat')
+    stage('deploy on tom')
 {steps
 {
 sshagent(['d1dcd31f-8d1d-48b3-bf7f-6ea5a34d095a']) {
