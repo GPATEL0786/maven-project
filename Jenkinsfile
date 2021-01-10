@@ -12,15 +12,12 @@ stage('SCM CHECKOUT')
 
 }
 stage('plesae compile code')
-steps{
-    withMaven(jdk: 'Gaurav-Home', maven: 'Gaurav-Maven') {
+    {steps
+     {withMaven(jdk: 'Gaurav-Home', maven: 'Gaurav-Maven')
     sh 'mvn compile'
 }
+    }
+
+
 }
-
-}
-
-
-
-
 }
