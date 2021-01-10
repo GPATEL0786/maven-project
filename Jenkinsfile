@@ -40,7 +40,7 @@ stage('please build code')
 {steps
 {
 sshagent(['d1dcd31f-8d1d-48b3-bf7f-6ea5a34d095a']) {
-    sh 'scp -o StrictHostKeyChecking=no */target/webapp.war ec2-user@172.31.2.73:var/lib/tomcat/webapps'
+    sh 'scp -o StrictHostKeyChecking=no */target/webapp.war ec2-user@172.31.2.73:/var/lib/tomcat/webapps'
 }
 }
 }
