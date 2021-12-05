@@ -1,21 +1,28 @@
 pipeline
 {
- agent any{
+agent any
 stages
 { 
  
  stage('scm checkout')
- {
-
- steps { git branch: 'master', url: 'https://github.com/GPATEL0786/maven-project.git' } }
+ { steps { git branch: 'master', url: 'https://github.com/prakashk0301/maven-project.git' } }
 
 
-  stage ('create package') { 
- steps {
+ stage ('run unit test framework')
+ { steps { withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') 
+   {
+    sh 'mvn test'
+    }
+ } }
+
+  stage ('create package')
+ { steps { withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') 
+   {
     sh 'mvn package'
     }
- }
+ } }
+
 
 }
 }
-}
+© 2021 GitHub, Inc.
