@@ -1,6 +1,6 @@
 pipeline
 {
-agent 'akua'
+label 'akua'
 stages
 { 
  
