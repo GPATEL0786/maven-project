@@ -1,8 +1,6 @@
 pipeline
 {
- agent {
-    label 'akua'
- }
+ agent any{
 stages
 { 
  
@@ -18,5 +16,6 @@ stages
     }
  }
 
+}
 }
 }
