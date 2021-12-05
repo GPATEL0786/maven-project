@@ -11,7 +11,7 @@ stages
 
 
  stage ('run unit test framework')
- { steps { withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') 
+ { steps { withMaven(jdk: 'JAVA_HOME', maven: 'M2_HOME') 
    {
     sh 'mvn test'
     }
